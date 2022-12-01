@@ -49,7 +49,7 @@ instances:
       #machineType: a2-highgpu-1g
       preemptibleInstance: True
       gpu:
-        type: nvidia-tesla-k80
+        type: nvidia-tesla-v100
         #type: nvidia-tesla-a100
         count: 1
       # https://console.cloud.google.com/compute/images?project=hear2021-evaluation
@@ -62,7 +62,7 @@ instances:
       volumes:
         - name: workspace
           parameters:
-            size: 40
+            size: 30
             mountDir: /workspace
         - name: docker
           parameters:
@@ -87,4 +87,4 @@ scripts:
   tensorboard: |
     tensorboard --bind_all --port 6006 --logdir /workspace/project/logs
   jupyter: |
-    jupyter notebook --allow-root --ip 0.0.0.0 --notebook-dir=/workspace/project
+    jupyter lab --allow-root --ip 0.0.0.0 --notebook-dir=/workspace/project

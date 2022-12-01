@@ -223,7 +223,7 @@ class MarginScheduler(Callback):
             step = (self.end_m - self.start_m) / (self.learn.n_epoch -1)
             self.margins = np.arange(self.start_m, self.end_m + step,step)
         else:
-            self.learn.loss_func.set_margin(self.end_m)
+            self.learn.loss_func.set_margin(self.start_m)
 
     def before_epoch(self):
         if self.learn.epoch > 0:

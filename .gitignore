@@ -86,7 +86,7 @@ private/
 # IPython
 profile_default/
 ipython_config.py
-
+.Trash-0/
 # pyenv
 .python-version
 
