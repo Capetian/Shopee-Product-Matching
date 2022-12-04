@@ -9,7 +9,7 @@ SHELL ["conda", "run", "/bin/bash", "-c"]
 RUN micromamba install -c conda-forge notebook ipywidgets tqdm  faiss-cpu accelerate tensorboard -y
 RUN micromamba install -c anaconda scikit-learn -y
 RUN micromamba install -c fastai timm -y
-RUN pip install fastai transformers madgrad kaggle 
-
+RUN pip install fastai transformers madgrad
+RUN pip install flask
 
 EXPOSE 8888 6006
