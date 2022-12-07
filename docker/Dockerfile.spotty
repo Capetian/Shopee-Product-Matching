@@ -10,6 +10,8 @@ RUN micromamba install -c conda-forge jupyterlab ipywidgets jupyterlab-lsp pytho
 RUN micromamba install -c anaconda scikit-learn -y
 RUN micromamba install -c fastai timm -y
 RUN pip install fastai transformers madgrad kaggle albumentations 
-
+RUN pip install aiofiles aiohttp transformers[deepspeed]
+RUN pip install playwright
+RUN playwright install --with-deps chromium
 
 EXPOSE 8888 6006

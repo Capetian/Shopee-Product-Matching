@@ -16,6 +16,8 @@ project:
         - heareval.egg-info/*
         - pretrained/*
         - data/*
+        - deploy/static/train_images/*
+        - deploy/uploads
         - .ipynb_checkpoints/*
         - training_notebooks/models/*
 
@@ -55,7 +57,6 @@ instances:
       # https://console.cloud.google.com/compute/images?project=hear2021-evaluation
       # https://github.com/spotty-cloud/spotty/issues/102
       #imageUri: projects/ml-images/global/images/c0-deeplearning-common-cu110-v20221107-debian-10
-      #imageUri: projects/ml-images/global/images/c2-deeplearning-pytorch-1-12-cu113-v20221107-debian-10
       imageUri: projects/ml-images/global/images/c2-deeplearning-pytorch-1-11-cu113-v20220701-debian-10
       ports: [6006, 8888]
       dockerDataRoot: /docker

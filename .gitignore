@@ -71,6 +71,9 @@ deploy/models/
 deploy/static/
 deploy/uploads/
 
+# Tensorboard
+logs/
+
 # Scrapy stuff:
 .scrapy
 

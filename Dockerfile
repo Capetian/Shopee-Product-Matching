@@ -11,5 +11,8 @@ RUN micromamba install -c anaconda scikit-learn -y
 RUN micromamba install -c fastai timm -y
 RUN pip install fastai transformers madgrad
 RUN pip install flask
-
+RUN pip install playwright
+RUN playwright install --with-deps chromium
+RUN pip install scrapy scrapy-playwright 
+RUN pip install aiofiles aiohttp
 EXPOSE 8888 6006
